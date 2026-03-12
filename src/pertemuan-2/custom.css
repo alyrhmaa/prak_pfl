@@ -1,0 +1,71 @@
+/* Styling untuk keseluruhan halaman */
+body {
+    /* Font Poppins untuk body - modern dan clean */
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #FFF0F5;
+    color: #1A1A1A;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container utama (Card) */
+.card {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 36px 28px;
+    border-radius: 32px;
+    box-shadow: 0 6px 30px rgba(255, 20, 147, 0.08);
+    border: 1px solid rgba(255, 20, 147, 0.05);
+}
+
+/* Header utama - Menggunakan Clash Display yang bold & stylish */
+h1 {
+    font-family: 'Clash Display', sans-serif;
+    color: #FF1493;
+    text-align: center;
+    font-size: 38px; /* Lebih besar */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 4px rgba(255, 20, 147, 0.15);
+    /* Efek gradien untuk vibe yang lebih keren */
+    background: linear-gradient(135deg, #FF1493, #FF6B9D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Paragraf - Lebih ringan dengan Poppins */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Garis pemisah */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, #FF1493, #00CED1, #FF1493);
+    margin: 28px 0;
+    opacity: 0.7;
+    border-radius: 2px;
+}
+
+/* Greeting / Teks kecil */
+small {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    color: #00CED1;
+    margin-top: 15px;
+    letter-spacing: 0.3px;
+}
