@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FaHome,
   FaShoppingCart,
@@ -6,6 +7,21 @@ import {
 } from "react-icons/fa";
 
 export default function Sidebar() {
+
+  const [menus, setMenus] = useState([
+    "Dashboard",
+    "Orders",
+    "Customers",
+  ]);
+
+  // 🟢 FUNCTION TAMBAH MENU
+  const handleAddMenu = () => {
+    const newMenu = prompt("Masukkan nama menu baru:");
+    if (newMenu) {
+      setMenus([...menus, newMenu]);
+    }
+  };
+
   return (
     <div className="flex min-h-screen w-72 flex-col bg-white p-10 shadow-lg">
 
@@ -20,35 +36,23 @@ export default function Sidebar() {
         </span>
       </div>
 
-      {/* Menu */}
+      {/* MENU DINAMIS */}
       <div className="mt-10">
         <ul className="space-y-3">
 
-          <li>
-            <div className="flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:text-hijau hover:font-extrabold">
-              <FaHome className="mr-4 text-xl" />
-              Dashboard
-            </div>
-          </li>
-
-          <li>
-            <div className="flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:text-hijau hover:font-extrabold">
-              <FaShoppingCart className="mr-4 text-xl" />
-              Orders
-            </div>
-          </li>
-
-          <li>
-            <div className="flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:text-hijau hover:font-extrabold">
-              <FaUsers className="mr-4 text-xl" />
-              Customers
-            </div>
-          </li>
+          {menus.map((menu, index) => (
+            <li key={index}>
+              <div className="flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:text-hijau hover:font-extrabold">
+                <FaHome className="mr-4 text-xl" />
+                {menu}
+              </div>
+            </li>
+          ))}
 
         </ul>
       </div>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <div className="mt-auto">
 
         <div className="mb-10 flex items-center rounded-md bg-hijau px-4 py-2 shadow-lg">
@@ -56,15 +60,19 @@ export default function Sidebar() {
           <div className="text-sm text-white">
             <span>Please organize your menus through button below!</span>
 
-            <div className="mt-3 flex items-center justify-center space-x-2 rounded-md bg-white p-2">
+            {/* 🟢 BUTTON ADD MENU SUDAH AKTIF */}
+            <div
+              onClick={handleAddMenu}
+              className="mt-3 flex cursor-pointer items-center justify-center space-x-2 rounded-md bg-white p-2 hover:bg-gray-100"
+            >
               <FaPlus className="text-gray-600" />
               <span className="text-gray-600">Add Menus</span>
             </div>
           </div>
 
           <img
-            src="https://avatar.iran.liara.run/public/28"
-            className="w-20 rounded-full"
+            src="/image/avatar.jpg"
+            className="w-24 rounded-full -mt-6"
           />
         </div>
 

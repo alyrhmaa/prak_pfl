@@ -1,5 +1,6 @@
 import PageHeader from "../components/PageHeader";
 
+import { useState } from "react";
 import {
   FaShoppingCart,
   FaTruck,
@@ -8,6 +9,8 @@ import {
 } from "react-icons/fa";
 
 export default function Dashboard() {
+  const [showOrders, setShowOrders] = useState(false);
+
   return (
     <div>
 
@@ -16,15 +19,28 @@ export default function Dashboard() {
       <div className="grid gap-4 p-5 sm:grid-cols-2 md:grid-cols-4">
 
         {/* Orders */}
-        <div className="flex items-center space-x-5 rounded-lg bg-white p-4 shadow-md">
-          <div className="rounded-full bg-hijau p-4 text-3xl text-white">
-            <FaShoppingCart />
+        <div>
+          <div
+            onClick={() => setShowOrders(!showOrders)}
+            className="flex cursor-pointer items-center space-x-5 rounded-lg bg-white p-4 shadow-md"
+          >
+            <div className="rounded-full bg-hijau p-4 text-3xl text-white">
+              <FaShoppingCart />
+            </div>
+
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold">75</span>
+              <span className="text-gray-400">Total Orders</span>
+            </div>
           </div>
 
-          <div className="flex flex-col">
-            <span className="text-2xl font-bold">75</span>
-            <span className="text-gray-400">Total Orders</span>
-          </div>
+          {showOrders && (
+            <div className="mt-2 rounded-lg bg-white p-4 shadow-md text-sm">
+              <p>🍔 Burger Order</p>
+              <p>🍕 Pizza Order</p>
+              <p>🥤 Drink Order</p>
+            </div>
+          )}
         </div>
 
         {/* Delivered */}

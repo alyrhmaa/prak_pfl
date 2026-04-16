@@ -40,10 +40,7 @@ export default function Header() {
             Hello, <b>Fikri Muhaffizh</b>
           </span>
 
-          <img
-            src="https://avatar.iran.liara.run/public/28"
-            className="h-10 w-10 rounded-full"
-          />
+     <img src="/image/avatar.png" className="h-12 w-12 rounded-full" />
         </div>
 
       </div>
