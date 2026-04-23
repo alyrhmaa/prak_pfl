@@ -8,7 +8,7 @@ export default function Orders() {
 
   return (
     <div id="dashboard-container">
-      <PageHeader />
+      <PageHeader title="Order List" buttonText="Export PDF" />
       <p>
         <p>Ini halaman Orders</p>
       </p>

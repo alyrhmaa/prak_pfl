@@ -1,23 +1,16 @@
 import PageHeader from "../components/PageHeader";
 
 import { useState } from "react";
-import {
-  FaShoppingCart,
-  FaTruck,
-  FaBan,
-  FaDollarSign,
-} from "react-icons/fa";
+import { FaShoppingCart, FaTruck, FaBan, FaDollarSign } from "react-icons/fa";
 
 export default function Dashboard() {
   const [showOrders, setShowOrders] = useState(false);
 
   return (
     <div>
-
-      <PageHeader />
+      <PageHeader title="Dashboard Overview" buttonText="+ Add New Data" />
 
       <div className="grid gap-4 p-5 sm:grid-cols-2 md:grid-cols-4">
-
         {/* Orders */}
         <div>
           <div
@@ -78,7 +71,6 @@ export default function Dashboard() {
             <span className="text-gray-400">Revenue</span>
           </div>
         </div>
-
       </div>
     </div>
   );
