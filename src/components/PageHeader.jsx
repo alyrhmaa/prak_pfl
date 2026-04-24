@@ -1,30 +1,21 @@
-export default function PageHeader({ 
-  title = "Dashboard", 
-  buttonText = "Add Button", 
-  showButton = true, 
-  onBtnClick 
-}) {
+export default function PageHeader({ title, breadcrumb, children }) {
   return (
-    <div className="flex items-center justify-between p-4 bg-transparent">
-      
-      {/* Bagian Kiri: Judul Dinamis */}
-      <div className="flex flex-col">
-        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
+    <div className="flex items-center justify-between p-4">
+      {/* LEFT */}
+      <div>
+        <h1 className="text-3xl font-bold text-gray-800">
           {title}
           <span className="text-hijau">.</span>
         </h1>
+
+        {/* BREADCRUMB */}
+        <p className="text-sm text-gray-400 mt-1">
+          {Array.isArray(breadcrumb) ? breadcrumb.join(" / ") : breadcrumb}
+        </p>
       </div>
 
-      {/* Bagian Kanan: Tombol Dinamis */}
-      {showButton && (
-        <button 
-          onClick={onBtnClick}
-          className="rounded-lg bg-hijau px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:bg-opacity-90 hover:shadow-lg active:scale-95"
-        >
-          {buttonText}
-        </button>
-      )}
-
+      {/* RIGHT (CUSTOM BUTTON / CONTENT) */}
+      <div>{children}</div>
     </div>
   );
 }

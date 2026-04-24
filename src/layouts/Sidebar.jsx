@@ -41,6 +41,20 @@ export default function Sidebar() {
             <FaUsers className="mr-4 text-xl" />
             Customers
           </NavLink>
+          {/* Error 400 */}
+          <NavLink to="/error400" className={menuClass}>
+            ⚠️ Error 400
+          </NavLink>
+
+          {/* Error 401 */}
+          <NavLink to="/error401" className={menuClass}>
+            🔒 Error 401
+          </NavLink>
+
+          {/* Error 403 */}
+          <NavLink to="/error403" className={menuClass}>
+            ⛔ Error 403
+          </NavLink>
         </ul>
       </div>
 
