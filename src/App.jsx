@@ -1,62 +1,60 @@
 import "./assets/tailwind.css";
-import Sidebar from "./layouts/Sidebar";
-import Header from "./layouts/Header";
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Orders from "./pages/Orders";
-import Customers from "./pages/Customers";
-import NotFound from "./pages/NotFound";
-import ErrorPage from "./components/ErrorPage"; // ⬅️ TAMBAH
+
+import MainLayout from "./layouts/MainLayout";
+import AuthLayout from "./layouts/AuthLayout";
+import ErrorPage from "./components/ErrorPage";
+import Loading from "./components/Loading"; // ⬅️ WAJIB ADA
+
+// ✅ LAZY (sesuai modul)
+const Dashboard = React.lazy(() => import("./pages/Dashboard"));
+const Orders = React.lazy(() => import("./pages/Orders"));
+const Customers = React.lazy(() => import("./pages/Customers"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
+
+const Login = React.lazy(() => import("./pages/auth/Login"));
+const Register = React.lazy(() => import("./pages/auth/Register"));
+const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 
 function App() {
   return (
-    <div className="flex min-h-screen bg-latar">
-      <Sidebar />
-      <div className="flex-1 p-4">
-        <Header />
+    <Suspense fallback={<Loading />}>
+      <Routes>
 
-        <Routes>
+        {/* MAIN LAYOUT */}
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
+        </Route>
 
-          {/* 🔥 ERROR ROUTES */}
-          <Route
-            path="/error400"
-            element={
-              <ErrorPage
-                code={400}
-                description="Bad Request"
-                image="https://cdn-icons-png.flaticon.com/512/2748/2748558.png"
-              />
-            }
-          />
-          <Route
-            path="/error401"
-            element={
-              <ErrorPage
-                code={401}
-                description="Unauthorized"
-                image="https://cdn-icons-png.flaticon.com/512/1828/1828479.png"
-              />
-            }
-          />
-          <Route
-            path="/error403"
-            element={
-              <ErrorPage
-                code={403}
-                description="Forbidden"
-                image="https://cdn-icons-png.flaticon.com/512/564/564619.png"
-              />
-            }
-          />
+        {/* AUTH LAYOUT */}
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot" element={<Forgot />} />
+        </Route>
 
-          {/* 404 */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
-    </div>
+        {/* ERROR ROUTES */}
+        <Route
+          path="/error400"
+          element={<ErrorPage code={400} description="Bad Request" />}
+        />
+        <Route
+          path="/error401"
+          element={<ErrorPage code={401} description="Unauthorized" />}
+        />
+        <Route
+          path="/error403"
+          element={<ErrorPage code={403} description="Forbidden" />}
+        />
+
+        {/* 404 */}
+        <Route path="*" element={<NotFound />} />
+
+      </Routes>
+    </Suspense>
   );
 }
 
