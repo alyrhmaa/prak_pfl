@@ -11,6 +11,9 @@ import Loading from "./components/Loading"; // ⬅️ WAJIB ADA
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/Orders"));
 const Customers = React.lazy(() => import("./pages/Customers"));
+const CustomerDetail = React.lazy(() => import("./pages/CustomerDetail"));
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
+const Products = React.lazy(() => import("./pages/Products"))
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 const Login = React.lazy(() => import("./pages/auth/Login"));
@@ -27,6 +30,9 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
+          <Route path="/customers/:id" element={<CustomerDetail />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/products" element={<Products />} />
         </Route>
 
         {/* AUTH LAYOUT */}

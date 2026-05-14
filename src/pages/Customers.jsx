@@ -1,5 +1,6 @@
 import PageHeader from "../components/PageHeader";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import data from "../data/Customers.json";
 
 export default function Customers() {
@@ -37,7 +38,17 @@ export default function Customers() {
               className="grid grid-cols-5 px-6 py-4 border-t hover:bg-gray-50"
             >
               <span>{item.customer_id}</span>
-              <span>{item.customer_name}</span>
+
+              {/* NAME LINK */}
+              <span>
+                <Link
+                  to={`/customers/${item.customer_id}`}
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  {item.customer_name}
+                </Link>
+              </span>
+
               <span>{item.email}</span>
               <span>{item.phone}</span>
 
@@ -65,9 +76,20 @@ export default function Customers() {
           <div className="bg-white p-6 rounded-lg w-80">
             <h2 className="font-bold mb-3">Add Customer</h2>
 
-            <input placeholder="Name" className="border p-2 w-full mb-2" />
-            <input placeholder="Email" className="border p-2 w-full mb-2" />
-            <input placeholder="Phone" className="border p-2 w-full mb-2" />
+            <input
+              placeholder="Name"
+              className="border p-2 w-full mb-2"
+            />
+
+            <input
+              placeholder="Email"
+              className="border p-2 w-full mb-2"
+            />
+
+            <input
+              placeholder="Phone"
+              className="border p-2 w-full mb-2"
+            />
 
             <select className="border p-2 w-full mb-3">
               <option>Bronze</option>

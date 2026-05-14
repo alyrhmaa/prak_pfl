@@ -1,0 +1,275 @@
+{
+  "product": [
+   {
+  "id": 1,
+  "title": "Essence Mascara Lash Princess",
+  "code": "P001",
+  "category": "beauty",
+  "brand": "Essence",
+  "price": 9990,
+  "stock": 25,
+  "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+},
+    {
+      "id": 2,
+      "title": "Vitamin C Serum",
+      "code": "P002",
+      "category": "Skincare",
+      "brand": "DermaFresh",
+      "price": 185000,
+      "stock": 18
+    },
+    {
+      "id": 3,
+      "title": "Matte Lip Cream",
+      "code": "P003",
+      "category": "Makeup",
+      "brand": "BeautyPop",
+      "price": 95000,
+      "stock": 40
+    },
+    {
+      "id": 4,
+      "title": "Soft Glow Cushion",
+      "code": "P004",
+      "category": "Makeup",
+      "brand": "Lumiere",
+      "price": 210000,
+      "stock": 12
+    },
+    {
+      "id": 5,
+      "title": "Brightening Toner",
+      "code": "P005",
+      "category": "Skincare",
+      "brand": "GlowSkin",
+      "price": 110000,
+      "stock": 30
+    },
+    {
+      "id": 6,
+      "title": "Aloe Vera Gel",
+      "code": "P006",
+      "category": "Skincare",
+      "brand": "NatureCare",
+      "price": 75000,
+      "stock": 50
+    },
+    {
+      "id": 7,
+      "title": "Perfect Brow Pencil",
+      "code": "P007",
+      "category": "Makeup",
+      "brand": "BeautyPop",
+      "price": 65000,
+      "stock": 35
+    },
+    {
+      "id": 8,
+      "title": "Silky Loose Powder",
+      "code": "P008",
+      "category": "Makeup",
+      "brand": "Lumiere",
+      "price": 145000,
+      "stock": 22
+    },
+    {
+      "id": 9,
+      "title": "Daily Sunscreen SPF50",
+      "code": "P009",
+      "category": "Skincare",
+      "brand": "SunGuard",
+      "price": 130000,
+      "stock": 28
+    },
+    {
+      "id": 10,
+      "title": "Rose Water Mist",
+      "code": "P010",
+      "category": "Skincare",
+      "brand": "NatureCare",
+      "price": 89000,
+      "stock": 45
+    },
+    {
+      "id": 11,
+      "title": "Velvet Blush On",
+      "code": "P011",
+      "category": "Makeup",
+      "brand": "BeautyPop",
+      "price": 99000,
+      "stock": 20
+    },
+    {
+      "id": 12,
+      "title": "Repair Hair Serum",
+      "code": "P012",
+      "category": "Haircare",
+      "brand": "HairGlow",
+      "price": 150000,
+      "stock": 15
+    },
+    {
+      "id": 13,
+      "title": "Keratin Shampoo",
+      "code": "P013",
+      "category": "Haircare",
+      "brand": "HairGlow",
+      "price": 115000,
+      "stock": 27
+    },
+    {
+      "id": 14,
+      "title": "Deep Moisturizer Cream",
+      "code": "P014",
+      "category": "Skincare",
+      "brand": "DermaFresh",
+      "price": 175000,
+      "stock": 19
+    },
+    {
+      "id": 15,
+      "title": "Natural Face Mask",
+      "code": "P015",
+      "category": "Skincare",
+      "brand": "NatureCare",
+      "price": 55000,
+      "stock": 60
+    },
+    {
+      "id": 16,
+      "title": "Glossy Lip Tint",
+      "code": "P016",
+      "category": "Makeup",
+      "brand": "BeautyPop",
+      "price": 85000,
+      "stock": 42
+    },
+    {
+      "id": 17,
+      "title": "Volumizing Mascara",
+      "code": "P017",
+      "category": "Makeup",
+      "brand": "Lumiere",
+      "price": 125000,
+      "stock": 17
+    },
+    {
+      "id": 18,
+      "title": "Niacinamide Serum",
+      "code": "P018",
+      "category": "Skincare",
+      "brand": "GlowSkin",
+      "price": 165000,
+      "stock": 21
+    },
+    {
+      "id": 19,
+      "title": "Body Lotion Sakura",
+      "code": "P019",
+      "category": "Bodycare",
+      "brand": "SoftCare",
+      "price": 98000,
+      "stock": 38
+    },
+    {
+      "id": 20,
+      "title": "Perfume Blossom",
+      "code": "P020",
+      "category": "Fragrance",
+      "brand": "LuxeScent",
+      "price": 250000,
+      "stock": 10
+    },
+    {
+      "id": 21,
+      "title": "Charcoal Facial Wash",
+      "code": "P021",
+      "category": "Skincare",
+      "brand": "DermaFresh",
+      "price": 105000,
+      "stock": 26
+    },
+    {
+      "id": 22,
+      "title": "Hair Vitamin Capsule",
+      "code": "P022",
+      "category": "Haircare",
+      "brand": "HairGlow",
+      "price": 135000,
+      "stock": 23
+    },
+    {
+      "id": 23,
+      "title": "Creamy Concealer",
+      "code": "P023",
+      "category": "Makeup",
+      "brand": "Lumiere",
+      "price": 119000,
+      "stock": 16
+    },
+    {
+      "id": 24,
+      "title": "Hydrating Sheet Mask",
+      "code": "P024",
+      "category": "Skincare",
+      "brand": "GlowSkin",
+      "price": 45000,
+      "stock": 70
+    },
+    {
+      "id": 25,
+      "title": "Gentle Micellar Water",
+      "code": "P025",
+      "category": "Skincare",
+      "brand": "NatureCare",
+      "price": 92000,
+      "stock": 33
+    },
+    {
+      "id": 26,
+      "title": "Luxury Hand Cream",
+      "code": "P026",
+      "category": "Bodycare",
+      "brand": "SoftCare",
+      "price": 88000,
+      "stock": 29
+    },
+    {
+      "id": 27,
+      "title": "Peach Lip Balm",
+      "code": "P027",
+      "category": "Makeup",
+      "brand": "BeautyPop",
+      "price": 52000,
+      "stock": 48
+    },
+    {
+      "id": 28,
+      "title": "Refreshing Body Mist",
+      "code": "P028",
+      "category": "Fragrance",
+      "brand": "LuxeScent",
+      "price": 142000,
+      "stock": 14
+    },
+    {
+      "id": 29,
+      "title": "Acne Spot Treatment",
+      "code": "P029",
+      "category": "Skincare",
+      "brand": "DermaFresh",
+      "price": 97000,
+      "stock": 31
+    },
+    {
+      "id": 30,
+      "title": "Collagen Night Cream",
+      "code": "P030",
+      "category": "Skincare",
+      "brand": "GlowSkin",
+      "price": 225000,
+      "stock": 11
+    }
+  ]
+}
