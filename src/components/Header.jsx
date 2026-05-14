@@ -37,7 +37,7 @@ export default function Header() {
 
         <div className="flex items-center space-x-4 border-l border-gray-300 pl-4">
           <span>
-            Hello, <b>Fikri Muhaffizh</b>
+            Hello, <b>Aliya Rahma</b>
           </span>
 
      <img src="/image/avatar.png" className="h-12 w-12 rounded-full" />
