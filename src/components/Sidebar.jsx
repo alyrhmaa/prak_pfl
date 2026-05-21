@@ -59,6 +59,11 @@ export default function Sidebar() {
             Products
           </NavLink>
 
+          <NavLink to="/components" className={menuClass}>
+            <FaBox className="mr-4 text-xl" />
+            Components
+          </NavLink>
+
           {/* Error 400 */}
           <NavLink to="/error400" className={menuClass}>
             ⚠️ Error 400
@@ -76,8 +81,8 @@ export default function Sidebar() {
 
         </ul>
       </div>
-
-      {/* FOOTER */}
+ {/* FOOTER */}
+     
       <div className="mt-auto">
 
         <div className="mb-10 flex items-center rounded-md bg-hijau px-4 py-2 shadow-lg">

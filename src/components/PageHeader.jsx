@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export default function PageHeader({ title, breadcrumb, children }) {
   return (
     <div className="flex items-center justify-between p-4">
@@ -16,6 +18,7 @@ export default function PageHeader({ title, breadcrumb, children }) {
 
       {/* RIGHT (CUSTOM BUTTON / CONTENT) */}
       <div>{children}</div>
+      <Button type="primary">Add Order</Button>
     </div>
   );
 }
