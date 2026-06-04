@@ -7,6 +7,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import ErrorPage from "./components/ErrorPage";
 import Loading from "./components/Loading"; // ⬅️ WAJIB ADA
 import Components from "./pages/Components";
+import FiturXYZ from "./pages/FiturXYZ";
 
 // ✅ LAZY (sesuai modul)
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
@@ -34,6 +35,7 @@ function App() {
           <Route path="/customers/:id" element={<CustomerDetail />} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/components" element={<Components  />} />
+          <Route path="/fitur-xyz" element={<FiturXYZ  />} />
           <Route path="/products" element={<Products />} />
         </Route>
 

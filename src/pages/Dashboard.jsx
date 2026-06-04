@@ -6,7 +6,7 @@ export default function Dashboard() {
   const [showOrders, setShowOrders] = useState(false);
 
   return (
-    <div>
+    <div id="dashboard-container">
       {/* HEADER */}
       <PageHeader title="Dashboard Overview" breadcrumb="Home / Dashboard">
         <button className="bg-hijau text-white px-4 py-2 rounded-lg">
